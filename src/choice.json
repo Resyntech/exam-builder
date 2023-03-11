@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "title": "Types of Blood Specimen",
+      "answers": ["Venous Whole Blood", "Serum", "Plasma", "Arterial Blood"],
+      "questions": [
+        { "forAns": 1, "question": "For hematology, immunohematology" },
+        {
+          "forAns": 1,
+          "question": "Only used in Chemistry for HbA1c determination"
+        },
+        {
+          "forAns": 2,
+          "question": "Chemistry and Immunology / Serology"
+        },
+        {
+          "forAns": 3,
+          "question": "For Hematology"
+        },
+        {
+          "forAns": 3,
+          "question": "Used in chemistry, only if serum is not available"
+        },
+        {
+          "forAns": 4,
+          "question": "For Chemistry"
+        },
+        {
+          "forAns": 4,
+          "question": "Used for blood gas analysis and pH measurement"
+        }
+      ]
+    },
+    {
+      "title": "Patient Identification Procedure",
+      "answers": [
+        "Conscious Inpatients",
+        "Sleeping patients",
+        "Mentally-incompetent patients",
+        "Outpatient patient"
+      ],
+      "questions": [
+        {
+          "forAns": 1,
+          "question": "Verbally ask their full name and verify with the ID bracelet placed on the arm of the patient"
+        },
+        {
+          "forAns": 2,
+          "question": "Gently awaken the patient verbally ask their full name comparing it with the ID bracelet"
+        },
+        {
+          "forAns": 3,
+          "question": "Ask the attending nurse or the relative verifying with the ID bracelet"
+        },
+        {
+          "forAns": 4,
+          "question": "Verbally ask their full name, address and birthdate and countercheck with a valid ID"
+        }
+      ]
+    },
+    {
+      "title": "Preferred site",
+      "answers": ["Arterial Puncture", "Capillary Puncture", "Venipuncture"],
+      "reference": "Methods of Collection",
+      "questions": [
+        {
+          "forAns": 1,
+          "question": "Radial artery"
+        },
+        {
+          "forAns": 1,
+          "question": "Brachial artery"
+        },
+        {
+          "forAns": 1,
+          "question": "Femoral artery, scalp artery, umbilical artery"
+        },
+        {
+          "forAns": 2,
+          "question": "Heel (lateral Plantar Area)"
+        },
+        {
+          "forAns": 2,
+          "question": "Finger"
+        },
+        {
+          "forAns": 3,
+          "question": "Antecubital Fossa (elbow pit)"
+        },
+        {
+          "forAns": 3,
+          "question": "Other arm and hand veins"
+        }
+      ],
+      "notes": [
+        {
+          "forAns": "Finger",
+          "note": [
+            "Central palmar area of 3rd and 4th digit of non-dominant hand",
+            "Used on adults or children (>1 y.o.)"
+          ]
+        },
+        {
+          "forAns": "Antecubital Fossa (elbow pit)",
+          "note": [
+            "Median cubital vein is preferred vein & the largest and the best anchored vein",
+            "Cephalic vein - 2nd preffered vein",
+            "Basilic vein - last choice"
+          ]
+        }
+      ]
+    }
+  ]
+}

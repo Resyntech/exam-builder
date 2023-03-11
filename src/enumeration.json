@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "title": "Sites to be avoided in venipuncture",
+      "answers": [
+        "Arm with IV lines",
+        "Hematoma",
+        "Burned or scarred areas",
+        "Mastectomy side",
+        "Casts on arm",
+        "AV Shunt/Fistula"
+      ],
+      "notes": [
+        {
+          "forAns": "Arm with IV lines",
+          "note": [
+            "Collect below the IV site",
+            "Stop IV infusion for 2 minutes and then collect blood sample. Discard the first 5mL (contaminated with IV fluid)",
+            "IV fluid contamination: Increased: Glucose, CL, K+, Na + 10% contamination with 5% dextrose = increased blood glucose by >= 500 mg/dL Decreased: Urea, Creatinine"
+          ]
+        },
+        {
+          "forAns": "Mastectomy side",
+          "note": ["Collect from the arm opposite to the mastectomy site."]
+        }
+      ]
+    },
+    {
+      "title": "Blood",
+      "answers": [
+        "Average Blood in Human Body = 4.73 L (5 quarts) of whole blood",
+        "Adult Male: 5-6L of blood",
+        "Adult Female: 4-5 L of Blood",
+        "Plasma (55-60%): 2.84 L (3 quarts)",
+        "Blood Cells (40-45%): 1.89 L (2 quarts)"
+      ]
+    },
+    {
+      "title": "Methods of Collection",
+      "answers": ["Arterial Puncture", "Capillary Puncture", "Venipuncture"],
+      "questions": [
+        {
+          "forAns": 1,
+          "question": "Oxygenated blood with bright red color (oxyhemoglobin)"
+        },
+        {
+          "forAns": 1,
+          "question": "Used for Chemistry: Blood gas analysis and pH measurement"
+        },
+        {
+          "forAns": 1,
+          "question": "Tourniquet is not needed during collection"
+        },
+        {
+          "forAns": 1,
+          "question": "Anticoagulant used is Heparin"
+        },
+        {
+          "forAns": 1,
+          "question": "Modified Allen test - used to dtermine whether the ulnar artery can provide collateral circulation to the hand after the radial artery puncture"
+        },
+        {
+          "forAns": 2,
+          "question": "Also kniwn as dermal / skin puncture"
+        },
+        {
+          "forAns": 2,
+          "question": "Method of collection for pediatrics and sometimes geriatrics"
+        },
+        {
+          "forAns": 2,
+          "question": "Rarely used in chemistry"
+        },
+        {
+          "forAns": 2,
+          "question": "Povidone-Iodine: not used as antiseptic for capillary puncture. May interfere in analyte measurement"
+        },
+        {
+          "forAns": 2,
+          "question": "Composed of arterial blood, venous blood, and intersititial fluids"
+        },
+        {
+          "forAns": 2,
+          "question": "Concentration differences (compare to venous blood)"
+        },
+        {
+          "forAns": 3,
+          "question": "Most common type of blood collection"
+        },
+        {
+          "forAns": 3,
+          "question": "Collection of blood from the vein through puncture methods to draw blood"
+        },
+        {
+          "forAns": 3,
+          "question": "Performed by phlebotomist"
+        },
+        {
+          "forAns": 3,
+          "question": "Blood collected is venous blood"
+        },
+        {
+          "forAns": 3,
+          "question": "Deoxygenated blood with dark red color (deoxyhemoglobin)"
+        }
+      ]
+    }
+  ]
+}

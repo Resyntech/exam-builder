@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border m-0 p-0 text-xl leading-normal;
+  }
+}
+@layer components {
+  .container-footer {
+    @apply bg-blue-600 text-white text-center text-xs p-1;
+  }
+  .container-header {
+    @apply bg-blue-600 text-white p-1;
+  }
+  .container-nav-ul {
+    @apply grid grid-flow-col text-center;
+  }
+  .container-main {
+    @apply text-xs rounded-md;
+  }
+  .container-children-holder {
+    @apply grid place-content-center gap-2 p-2;
+  }
+  .container-multi-choice {
+    @apply p-2 border-2 rounded-md m-8 sm:m-12 md:m-0;
+  }
+  .container-number {
+    @apply bg-blue-600 text-white text-xs p-1 rounded-md select-none;
+  }
+  .container-result {
+    @apply flex flex-col gap-2
+    text-center border-2 rounded-md;
+    @apply p-2 m-2;
+  }
+  .link {
+    @apply text-xs capitalize;
+  }
+  .label-input {
+    @apply absolute z-10 text-xs capitalize font-semibold;
+  }
+  .label-select {
+    @apply text-xs capitalize font-semibold;
+  }
+  button {
+    @apply rounded-md capitalize;
+  }
+  .button-contain-center {
+    @apply grid place-content-center;
+  }
+  .button-choice {
+    @apply p-2 border-2;
+  }
+}
+
+@layer utilities {
+  .correct {
+    @apply bg-green-500 text-white;
+    @apply transition-all duration-300;
+  }
+  .incorrect {
+    @apply bg-red-500 text-white;
+    @apply transition-all duration-300;
+  }
+  .absolute-center {
+    @apply absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2;
+  }
+  .load-span {
+    @apply text-xl font-black;
+  }
+  .delay-1 {
+    animation-delay: 100ms;
+  }
+  .delay-2 {
+    animation-delay: 200ms;
+  }
+  .delay-3 {
+    animation-delay: 300ms;
+  }
+}
