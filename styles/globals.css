@@ -9,10 +9,10 @@
 }
 @layer components {
   .container-footer {
-    @apply bg-blue-600 text-white text-center text-xs p-1;
+    @apply text-center text-xs p-1;
   }
   .container-header {
-    @apply bg-blue-600 text-white p-1;
+    @apply p-1;
   }
   .container-nav-ul {
     @apply grid grid-flow-col text-center;
@@ -27,7 +27,7 @@
     @apply p-2 border-2 rounded-md m-8 sm:m-12 md:m-0;
   }
   .container-number {
-    @apply bg-blue-600 text-white text-xs p-1 rounded-md select-none;
+    @apply text-xs p-1 rounded-md select-none;
   }
   .container-result {
     @apply flex flex-col gap-2
@@ -68,6 +68,12 @@
   }
   .load-span {
     @apply text-xl font-black;
+  }
+  .socials {
+    @apply flex gap-2 items-center justify-center text-center;
+  }
+  .typo-main {
+    @apply capitalize font-semibold text-center text-2xl;
   }
   .delay-1 {
     animation-delay: 100ms;

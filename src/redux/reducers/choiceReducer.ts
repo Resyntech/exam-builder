@@ -1,12 +1,17 @@
 import { DataAction } from "../types"
 import * as actionTypes from "../types"
-import { AnswersExtended } from "../../utils/types/types"
+import { AnswersExtended, ScopeTypes } from "../../utils/types/types"
 
 type ChoiceAnswersType = {
+  scope: ScopeTypes
   result: AnswersExtended[]
 }
 
 const initialState: ChoiceAnswersType = {
+  scope: {
+    refID: null,
+    subject: null,
+  },
   result: [],
 }
 
@@ -16,6 +21,11 @@ export default function choiceReducer(
   action: DataAction
 ): ChoiceAnswersType {
   switch (action.type) {
+    case actionTypes.SET_CHOICE_EXAM:
+      return {
+        ...state,
+        scope: action.payload,
+      }
     case actionTypes.SET_CHOICE_ANSWERS:
       let array = [...state.result]
       array[action.payload.index] = action.payload.props

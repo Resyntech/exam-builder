@@ -34,7 +34,7 @@ module.exports = {
           accent: {
             1: "#eeaa00",
             2: "#bf92e9",
-            2: "##2be68e",
+            3: "#2be68e",
           },
           primary: "#2378cb",
           secondary: "#fa7c42",
@@ -44,11 +44,11 @@ module.exports = {
             3: "#010d18",
           },
         },
-        "discord-dark": {
+        discord: {
           accent: {
             1: "#23a55a",
             2: "#f0b232",
-            2: "#c13a3e",
+            3: "#c13a3e",
           },
           primary: "#5865f2",
           secondary: "#e9f0f5",

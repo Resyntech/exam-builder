@@ -3,11 +3,19 @@ import * as actionTypes from "../types"
 
 interface UiStateTypes {
   darkMode: boolean
+  theme: "discord" | "default"
+  subjectModal: boolean
+  clearingForms: number
+  email: string | null
   error: Error | null
 }
 
 const initialState: UiStateTypes = {
   darkMode: false,
+  theme: "default",
+  subjectModal: false,
+  clearingForms: 0,
+  email: null,
   error: null,
 }
 
@@ -17,10 +25,25 @@ export default function uiReducer(
   action: DataAction
 ): UiStateTypes {
   switch (action.type) {
-    case actionTypes.DATA_ERROR:
+    case actionTypes.SET_THEME:
       return {
         ...state,
-        error: action.payload,
+        theme: action.payload,
+      }
+    case actionTypes.SET_SUBJECT_MODAL:
+      return {
+        ...state,
+        subjectModal: action.payload,
+      }
+    case actionTypes.CLEAR_FORMS:
+      return {
+        ...state,
+        clearingForms: state.clearingForms + 1,
+      }
+    case actionTypes.SET_EMAIL:
+      return {
+        ...state,
+        email: action.payload,
       }
     default:
       return state

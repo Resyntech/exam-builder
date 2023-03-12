@@ -29,7 +29,7 @@ export function toggleDarkMode(): ThunkAction<
     }
   }
 }
-export function setTheme(): ThunkAction<
+export function setDarkTheme(): ThunkAction<
   void,
   RootState,
   undefined,
@@ -44,6 +44,104 @@ export function setTheme(): ThunkAction<
           payload: JSON.parse(isDarkMode),
         })
       return localStorage.setItem("darkMode", "false")
+    } catch (error: any) {
+      dispatch({
+        type: actionTypes.DATA_ERROR,
+        payload: error,
+      })
+    }
+  }
+}
+export function setSubjectModal(
+  props: boolean
+): ThunkAction<void, RootState, undefined, DataAction> {
+  return async (dispatch: any) => {
+    try {
+      dispatch({
+        type: actionTypes.SET_SUBJECT_MODAL,
+        payload: props,
+      })
+    } catch (error: any) {
+      console.log(error)
+      // dispatch({
+      //   type: actionTypes.DATA_ERROR,
+      //   payload: error,
+      // })
+    }
+  }
+}
+export function clearForms(): ThunkAction<
+  void,
+  RootState,
+  undefined,
+  DataAction
+> {
+  return async (dispatch: any) => {
+    try {
+      dispatch({
+        type: actionTypes.CLEAR_FORMS,
+        payload: null,
+      })
+    } catch (error: any) {
+      console.log(error)
+      // dispatch({
+      //   type: actionTypes.DATA_ERROR,
+      //   payload: error,
+      // })
+    }
+  }
+}
+export function setEmail(
+  props: string
+): ThunkAction<void, RootState, undefined, DataAction> {
+  return async (dispatch: any) => {
+    try {
+      dispatch({
+        type: actionTypes.SET_EMAIL,
+        payload: props,
+      })
+    } catch (error: any) {
+      console.log(error)
+      // dispatch({
+      //   type: actionTypes.DATA_ERROR,
+      //   payload: error,
+      // })
+    }
+  }
+}
+export function setTheme(
+  props: string
+): ThunkAction<void, RootState, undefined, DataAction> {
+  return async (dispatch: any) => {
+    try {
+      localStorage.setItem("theme", props)
+      dispatch({
+        type: actionTypes.SET_THEME,
+        payload: props,
+      })
+    } catch (error: any) {
+      console.log(error)
+      // dispatch({
+      //   type: actionTypes.DATA_ERROR,
+      //   payload: error,
+      // })
+    }
+  }
+}
+export function setInitTheme(): ThunkAction<
+  void,
+  RootState,
+  undefined,
+  DataAction
+> {
+  return async (dispatch: any) => {
+    try {
+      const theme = localStorage.getItem("theme")
+      if (window !== undefined && theme !== null)
+        return dispatch({
+          type: actionTypes.SET_THEME,
+          payload: theme,
+        })
     } catch (error: any) {
       dispatch({
         type: actionTypes.DATA_ERROR,

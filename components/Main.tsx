@@ -6,7 +6,7 @@ const Main = ({ children, ...rest }: MainTypes) => {
     <main className="container-main">
       <SEO {...rest} />
       <Header />
-      <Children children={children} />
+      <Children fit>{children}</Children>
       <Footer />
     </main>
   )

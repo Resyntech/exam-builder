@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
-import { getFirestore } from "firebase/firestore"
+import { collection, doc, getFirestore } from "firebase/firestore"
 
 export const firebaseApp = initializeApp({
   apiKey: process.env.NEXT_PUBLIC_API_KEY,
@@ -13,3 +13,14 @@ export const firebaseApp = initializeApp({
 })
 export const db = getFirestore(firebaseApp)
 export const auth = getAuth(firebaseApp)
+
+export const userCollection = collection(db, "users")
+export const getSubjectCol = ({
+  docID,
+  colName,
+}: {
+  docID: string
+  colName: string
+}) => {
+  return collection(doc(userCollection, docID), colName)
+}

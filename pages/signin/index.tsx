@@ -1,9 +1,9 @@
 import Image from "next/image"
 import { useRouter } from "next/router"
-import { Children } from "../components"
-import { useAuth } from "../components/AuthContext"
+import { Children } from "../../components"
+import { useAuth } from "../../components/AuthContext"
 
-const signin = () => {
+const Signin = () => {
   const { currentUser, googleSignIn, signout } = useAuth()
   const { push } = useRouter()
   const DIMENSION = 36
@@ -31,4 +31,4 @@ const signin = () => {
   )
 }
 
-export default signin
+export default Signin

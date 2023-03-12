@@ -1,5 +1,6 @@
 import { Auth, UserCredential } from "firebase/auth"
-import React, { ReactNode } from "react"
+import { DocumentData } from "firebase/firestore"
+import React from "react"
 
 export type EmailType = { email: string }
 export type PasswordType = { password: string }
@@ -27,18 +28,29 @@ export type HeadTypes = {
 }
 
 export interface MainTypes extends HeadTypes {
-  children: ReactNode
+  children: React.ReactNode
   title: string
 }
 
 export interface SelectTypes extends React.HTMLAttributes<HTMLSelectElement> {
+  disabled?: boolean
   label: string
-  choices: number[]
+  choices: Array<string | number>
 }
 
 export interface InputTypes
   extends React.HTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
-  disabled?: boolean
   rows?: number
+  type: "text" | "textarea"
+  disabled?: boolean
   label: string
 }
+
+export type UserDataTypes =
+  | {
+      email: string
+      createdAt: Date
+      subjects: string[]
+    }
+  | DocumentData
+  | undefined

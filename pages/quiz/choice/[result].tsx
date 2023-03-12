@@ -1,23 +1,25 @@
-import { collection } from "firebase/firestore"
-import Link from "next/link"
+import { arrayUnion, doc, updateDoc } from "firebase/firestore"
 import { useRouter } from "next/router"
-// import { useState } from "react"
 import { useAuth } from "../../../components/AuthContext"
+import { colorHeader } from "../../../components/theme"
 import { useAppSelector } from "../../../src/redux/hooks"
-import { db } from "../../../src/utils/firebase"
+import { userCollection } from "../../../src/utils/firebase"
 
 const Result = () => {
   const result = useAppSelector((s) => s.choice.result)
-  const userCollect = collection(db, "user")
+  const theme = useAppSelector((s) => s.ui.theme)
   const { currentUser } = useAuth()
   const { push } = useRouter()
-  // const [state, setState] = useState<number>(0)
   let array = 0
-  // const test = addDoc(userCollect, {
-  //   email: "alarma1930681@mls.ceu.edu.ph",
-  // })
 
   if (!currentUser) push("/")
+
+  const handleConfirm = async () => {
+    await updateDoc(doc(userCollection, `${currentUser?.email}`), {
+      results: arrayUnion({ result, dateTaken: new Date() }),
+    })
+    push("/quiz")
+  }
 
   return (
     <div>
@@ -28,7 +30,7 @@ const Result = () => {
         const format = (val: string) => val.replace(/_/g, " ")
 
         return (
-          <section className="container-result" key={i}>
+          <section className={`container-result ${colorHeader(theme)}`} key={i}>
             <h3 className="font-semibold">{`What is ${question}?`}</h3>
             <p
               className={
@@ -49,9 +51,7 @@ const Result = () => {
       })}
       <p>Total: {array}</p>
       <div className="button-contain-center">
-        <Link href="/quiz" passHref>
-          <a>confirm</a>
-        </Link>
+        <button onClick={handleConfirm}>confirm</button>
       </div>
     </div>
   )

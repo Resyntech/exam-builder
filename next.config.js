@@ -6,12 +6,21 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "lh3.googleusercontent.com",
-        port: "",
       },
     ],
   },
   async redirects() {
     return [
+      {
+        source: "/dashboard/subjects",
+        destination: "/dashboard",
+        permanent: false,
+      },
+      {
+        source: "/dashboard/subjects/:subject",
+        destination: "/dashboard",
+        permanent: false,
+      },
       {
         source: "/quiz/choice/:result",
         destination: "/quiz",
@@ -19,6 +28,11 @@ const nextConfig = {
       },
       {
         source: "/quiz/choice",
+        destination: "/quiz",
+        permanent: false,
+      },
+      {
+        source: "/quiz/:subject",
         destination: "/quiz",
         permanent: false,
       },

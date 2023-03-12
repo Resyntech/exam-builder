@@ -2,6 +2,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/src/M2-L1/*
 
 # testing
 /coverage
