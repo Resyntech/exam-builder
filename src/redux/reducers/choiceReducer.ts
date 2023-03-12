@@ -1,10 +1,10 @@
 import { DataAction } from "../types"
 import * as actionTypes from "../types"
-import { AnswersExtended, ScopeTypes } from "../../utils/types/types"
+import { ScopeTypes } from "../../utils/types/types"
 
 type ChoiceAnswersType = {
   scope: ScopeTypes
-  result: AnswersExtended[]
+  result: any[]
 }
 
 const initialState: ChoiceAnswersType = {
